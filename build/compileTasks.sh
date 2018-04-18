@@ -27,7 +27,7 @@ else
 	if [[ $? -eq 0 ]]
 	then
 		#If compilation was correct run tests
-		mvn -q test
+		mvn -q test > /dev/null
 		if [[ $? -ne 0 ]]
 		then
 			#If tests failed show error
